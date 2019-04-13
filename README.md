@@ -1,11 +1,11 @@
 <h1 align="center">ipdrone v1.0</h1>
 <p align="center">
-      Ip lookup and tools
+      Ip lookup python script for termux
 </p>
 
-# Ipdrone
-Get your victim's location by his/her ip address in Termux from ipdrone
-in simple steps 
+### About ipdrone tool ?
+
+ipdrone is a simply python script, which can be used to Ip lookup and to get information of perticualr target Ip.
 
 # Installation and usage guide
 
