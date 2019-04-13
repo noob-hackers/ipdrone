@@ -4,7 +4,6 @@
 </p>
 
 ## About ipdrone tool :
-![Click here](https://user-images.githubusercontent.com/49580304/56079560-24b96f00-5e14-11e9-8951-922a9661e5f0.gif)
 
 ipdrone is a simply python script, which can be used to Ip lookup and to get information of perticualr target Ip. This tool works on both rooted Android device and Non-rooted Android device.
 
