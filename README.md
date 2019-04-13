@@ -3,7 +3,7 @@
       Ip lookup python script for termux
 </p>
 
-## About ipdrone tool ?
+## About ipdrone tool :
 
 ipdrone is a simply python script, which can be used to Ip lookup and to get information of perticualr target Ip. This tool works on both rooted Android device and Non-rooted Android device.
 
