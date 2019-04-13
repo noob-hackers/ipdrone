@@ -33,3 +33,6 @@ https://www.youtube.com/noobhackers
 
 # chek out our blog 
 https://www.noob-hackers.com
+
+# warning
+This tool is only for educational purpose. If you use this tool for other purposes except education we will not be responsible in such cases.
