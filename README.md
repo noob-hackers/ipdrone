@@ -19,7 +19,9 @@ ipdrone is a simply python script, which can be used to Ip lookup and to get inf
 * Termux
 
 ### Installation and usage guide
- 
+```
+$ apt-get update -y
+```
 ```
 $ apt-get upgrade -y
 ```
