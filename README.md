@@ -3,8 +3,11 @@ get your victim's location by his/her ip address in Termux by ipdrone
 in simple steps 
 
 # usage guide
+
 apt-get update -y
+
 apt-get upgrade -y
+
 pkg install python -y
 pkg install python2 -y
 pkg install git -y
