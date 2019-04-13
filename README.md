@@ -1,5 +1,5 @@
 # ipdrone
-get your victim's location by his/her ip address in Termux by ipdrone
+get your victim's location by his/her ip address in Termux from ipdrone
 in simple steps 
 
 # usage guide
