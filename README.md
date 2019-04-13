@@ -26,10 +26,10 @@ in simple steps
 ...
 
     $ ls
-...
+
 
     $ python ipdrone.py -v (your victim ip here)
-...
+
 
 ex:- python ipdrone.py -v 127.0,0.1
 
