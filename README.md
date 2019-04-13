@@ -3,27 +3,18 @@ get your victim's location by his/her ip address in Termux from ipdrone
 in simple steps 
 
 # usage guide
-```
-$ apt-get upgrade -y
-```
-$ pkg install python -y 
-```
-$ pkg install python2 -y
-```  
-$ pkg install git -y
-```   
-$ ls
-```    
-$ git clone https://github.com/noob-hackers/ipdrone
-```
-$ ls
-```
-$ cd ipdrone   
-```
-$ ls
-```
-$ python ipdrone.py -v (your victim ip here)
-```
+
+```$ apt-get upgrade -y
+```$ pkg install python -y 
+```$ pkg install python2 -y
+```$ pkg install git -y
+```$ ls
+```$ git clone https://github.com/noob-hackers/ipdrone
+```$ ls
+```$ cd ipdrone   
+```$ ls
+```$ python ipdrone.py -v (your victim ip here)
+
 ex:- python ipdrone.py -v 127.0,0.1
 
 Hurray... you got his location with some more information
