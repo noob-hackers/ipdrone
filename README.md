@@ -6,7 +6,6 @@ in simple steps
 
     $ apt-get update -y
 
-
     $ apt-get upgrade -y
 
 
