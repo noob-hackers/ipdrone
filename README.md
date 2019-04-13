@@ -1,4 +1,4 @@
-# ipdrone
+# Ipdrone
 get your victim's location by his/her ip address in Termux from ipdrone
 in simple steps 
 
@@ -38,15 +38,15 @@ ex:- python ipdrone.py -v 127.0,0.1
 
 Hurray... you got his location with some more information
 
-# script screenshot
+# Script screenshot
 
 ![unnamed (2)](https://user-images.githubusercontent.com/49580304/56078909-e66b8200-5e0a-11e9-8e30-ab6351083f02.jpg)
 
-# subscribe our channel on youtube
+# Subscribe our channel on youtube
 https://www.youtube.com/noobhackers
 
-# chek out our blog 
+# Chek out our webite 
 https://www.noob-hackers.com
 
-# warning
+# Warning
 This tool is only for educational purpose. If you use this tool for other purposes except education we will not be responsible in such cases.
