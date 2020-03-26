@@ -1,13 +1,23 @@
-#coded by N17RO (noob hackers)
+# coded by N17RO (noob hackers)
 
-#modules required
+# modules required
 import argparse
 import requests, json
 import sys
 from sys import argv
-import os
+from win32com.clint import Dispatch
 
-#arguments and parser
+# enhancing the program
+
+def speak(str):
+  speak = Dispatch("SAPI.SpVoice")
+  speak.speak(str)
+
+# Speaking of command
+
+speak("Welcome to IP Drone, creator noobs hacker")
+  
+# arguments and parser
 
 parser = argparse.ArgumentParser()
 
@@ -15,7 +25,7 @@ parser.add_argument ("-v", help= "target/host IP address", type=str, dest='targe
 
 args = parser.parse_args()
 
-#colours used
+# colours used
 red = '\033[31m'
 yellow = '\033[93m'
 lgreen = '\033[92m'
@@ -23,7 +33,7 @@ clear = '\033[0m'
 bold = '\033[01m'
 cyan = '\033[96m'
 
-#banner of script
+# banner of script
 print (red+"""
 
 ██╗██████╗ ██████╗ ██████╗  ██████╗ ███╗   ██╗███████╗
@@ -35,7 +45,7 @@ print (red+"""
                                                       v 1.0
 """+red)
 print (lgreen+bold+"         <===[[ coded by N17RO ]]===> \n"+clear)
-print (yellow+bold+"   <---(( search on youtube noob hackers ))--> \n"+clear)
+print (yellow+bold+"   <---(( search on youtube noob hackers ))-->"+clear)
 
 
 ip = args.target
