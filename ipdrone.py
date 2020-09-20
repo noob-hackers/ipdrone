@@ -35,7 +35,7 @@ print (red+"""
                                                       v 1.0
 """+red)
 print (lgreen+bold+"         <===[[ coded by N17RO ]]===> \n"+clear)
-print (yellow+bold+"   <---(( search on youtube noob hackers ))--> \n"+clear)
+print (yellow+bold+"   <---(( search on youtube Noob Hackers ))--> \n"+clear)
 
 
 ip = args.target
