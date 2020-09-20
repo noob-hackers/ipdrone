@@ -60,7 +60,7 @@ ex:- python ipdrone.py -v 127.0,0.1
 Hurray... you got his location with some more information
 
 ### Subscribe our channel on youtube
-https://www.youtube.com/noobhackers
+https://rebrand.ly/noobhackers
 
 ### Chekout our webite 
 https://www.noob-hackers.com
