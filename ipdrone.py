@@ -37,7 +37,6 @@ print (red+"""
 print (lgreen+bold+"         <===[[ coded by N17RO ]]===> \n"+clear)
 print (yellow+bold+"   <---(( search on youtube Noob Hackers ))--> \n"+clear)
 
-
 ip = args.target
 
 api = "http://ip-api.com/json/"
@@ -56,6 +55,8 @@ try:
         print (b, "[City]:", data['city'])
         print(red+"<--------------->"+red)
         print (a, "[Region]:", data['region'])
+        print(red+"<--------------->"+red)
+        print (a, "[Country]:", data['country'])
         print(red+"<--------------->"+red)
         print (b, "[Longitude]:", data['lon'])
         print(red+"<--------------->"+red)
