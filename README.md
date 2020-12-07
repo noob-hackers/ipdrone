@@ -81,7 +81,7 @@ __SCAN__ :
 
 ## WATCH VIDEO [Termux]
 
-[![des](https://user-images.githubusercontent.com/49580304/96466915-3c2ea080-11df-11eb-8328-100ca165c12c.jpg)](https://www.noob-hackers.com/)
+[![des](https://user-images.githubusercontent.com/49580304/96466915-3c2ea080-11df-11eb-8328-100ca165c12c.jpg)](https://rebrand.ly/rcentvideo)
 
 ## CONNECT WITH US :
 
