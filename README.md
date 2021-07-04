@@ -64,17 +64,17 @@ Ipdrone is a simply python script, which can be used to Ip lookup and to get inf
 * `ls`
 * `python ipdrone.py -v (your victim ip here)`
 ```
-ex:- python ipdrone.py -v 127.0,0.1
+ex:- python ipdrone.py -v 127.0.0.1
 
-Hurray... you got his location with some more information
+Hurray... you got the location with some more information
 
 ```
 ## USAGE OPTIONS [Termux] :
 
 __SCAN__ :
-- From this option you can start tracking ip ocation
+- From this option you can start tracking IP location
 
-## SCREEN SHOTS [Termux]
+## SCREENSHOTS [Termux]
 
 <br>
 <p align="center">
@@ -105,4 +105,4 @@ __SCAN__ :
 </p>
 
 ## WARNING : 
-***This tool is only for educational purpose. If you use this tool for other purposes except education we will not be responsible in such cases.***
+***This tool is only for educational purpose. We will not be responsible if you use this tool for other purposes except education.***
