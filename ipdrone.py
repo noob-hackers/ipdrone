@@ -1,74 +1,47 @@
-#coded by N17RO (noob hackers)
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-#modules required
+# coded by N17RO (noob hackers)
+
+# modules required
 import argparse
 import requests, json
 import sys
 from sys import argv
 import os
 
-#arguments and parser
+from utils import API
+from utils import printA, printB, printBanner
 
+
+# arguments and parser
 parser = argparse.ArgumentParser()
-
 parser.add_argument ("-v", help= "target/host IP address", type=str, dest='target', required=True )
-
 args = parser.parse_args()
-
-#colours used
-red = '\033[31m'
-yellow = '\033[93m'
-lgreen = '\033[92m'
-clear = '\033[0m'
-bold = '\033[01m'
-cyan = '\033[96m'
-
-#banner of script
-print (red+"""
-
-██╗██████╗ ██████╗ ██████╗  ██████╗ ███╗   ██╗███████╗
-██║██╔══██╗██╔══██╗██╔══██╗██╔═══██╗████╗  ██║██╔════╝
-██║██████╔╝██║  ██║██████╔╝██║   ██║██╔██╗ ██║█████╗  
-██║██╔═══╝ ██║  ██║██╔══██╗██║   ██║██║╚██╗██║██╔══╝  
-██║██║     ██████╔╝██║  ██║╚██████╔╝██║ ╚████║███████╗
-╚═╝╚═╝     ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
-                                                      v 1.0
-"""+red)
-print (lgreen+bold+"         <===[[ coded by N17RO ]]===> \n"+clear)
-print (yellow+bold+"   <---(( search on youtube Noob Hackers ))--> \n"+clear)
-
-
 ip = args.target
 
-api = "http://ip-api.com/json/"
+
+# banner
+printBanner()
 
 try:
-        data = requests.get(api+ip).json()
+        data = requests.get(API+ip).json()
         sys.stdout.flush()
-        a = lgreen+bold+"[$]"
-        b = cyan+bold+"[$]"
-        print (a, "[Victim]:", data['query'])
-        print(red+"<--------------->"+red)
-        print (b, "[ISP]:", data['isp'])
-        print(red+"<--------------->"+red)
-        print (a, "[Organisation]:", data['org'])
-        print(red+"<--------------->"+red)
-        print (b, "[City]:", data['city'])
-        print(red+"<--------------->"+red)
-        print (a, "[Region]:", data['region'])
-        print(red+"<--------------->"+red)
-        print (b, "[Longitude]:", data['lon'])
-        print(red+"<--------------->"+red)
-        print (a, "[Latitude]:", data['lat'])
-        print(red+"<--------------->"+red)
-        print (b, "[Time zone]:", data['timezone'])
-        print(red+"<--------------->"+red)
-        print (a, "[Zip code]:", data['zip'])
-        print (" "+yellow)
+
+        printA("[Victim]:", data['query'])
+        printB("[ISP]:", data['isp'])
+        printA("[Organisation]:", data['org'])
+        printB("[City]:", data['city'])
+        printA("[Region]:", data['region'])
+        printB("[Longitude]:", data['lon'])
+        printA("[Latitude]:", data['lat'])
+        printB("[Time zone]:", data['timezone'])
+        printA("[Zip code]:", data['zip'])
 
 except KeyboardInterrupt:
-        print ('Terminating, Bye'+lgreen)
+        print('Terminating, Bye'+LGREEN)
         sys.exit(0)
 except requests.exceptions.ConnectionError as e:
-        print (red+"[~]"+" check your internet connection!"+clear)
+        print(RED+"[~]"+" check your internet connection!"+CLEAR)
+        
 sys.exit(1)
