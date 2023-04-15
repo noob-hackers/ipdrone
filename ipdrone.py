@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# NOTE: if you don't know your public ip use the publicIP.py script
+
 # coded by N17RO (noob hackers)
 
 # modules required
