@@ -6,13 +6,9 @@
 # modules required
 import argparse
 import requests, json
-import sys
 from sys import argv
-import os
 
-from utils import API
-from utils import printA, printB, printBanner
-
+from utils import *
 
 # arguments and parser
 parser = argparse.ArgumentParser()
@@ -26,7 +22,7 @@ printBanner()
 
 try:
         data = requests.get(API+ip).json()
-        sys.stdout.flush()
+        flush()
 
         printA("[Victim]:", data['query'])
         printB("[ISP]:", data['isp'])
@@ -39,9 +35,7 @@ try:
         printA("[Zip code]:", data['zip'])
 
 except KeyboardInterrupt:
-        print('Terminating, Bye'+LGREEN)
-        sys.exit(0)
+        terminate()
+
 except requests.exceptions.ConnectionError as e:
-        print(RED+"[~]"+" check your internet connection!"+CLEAR)
-        
-sys.exit(1)
+        error()

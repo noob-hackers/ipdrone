@@ -1,5 +1,7 @@
 # utilities for ipdrone.py (helper functions and constants)
 
+import sys
+
 # URL of the API
 API = "http://ip-api.com/json/"
 
@@ -39,3 +41,13 @@ def printB(text):
     print(CYAN + BOLD + "[$]", text)
     print(RED + "<--------------->" + RED)
 
+def terminate():
+    print('Terminating, Bye'+LGREEN)
+    sys.exit(0)
+
+def error():
+    print(RED+"[~]"+" check your internet connection!"+CLEAR)
+    sys.exit(0)
+
+def flush():
+    sys.stdout.flush()
