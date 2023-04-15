@@ -33,12 +33,12 @@ def printBanner():
 {CLEAR}
         """)
 
-def printA(text):
-    print(LGREENb+ BOLD+ "[$]", text)
+def printA(*text):
+    print(LGREEN + BOLD+ "[$]", *text)
     print(RED + "<--------------->" + RED)
 
-def printB(text):
-    print(CYAN + BOLD + "[$]", text)
+def printB(*text):
+    print(CYAN + BOLD + "[$]", *text)
     print(RED + "<--------------->" + RED)
 
 def terminate():
