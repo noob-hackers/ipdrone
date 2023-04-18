@@ -12,6 +12,7 @@ LGREEN = '\033[92m'
 CLEAR = '\033[0m'
 BOLD = '\033[01m'
 CYAN = '\033[96m'
+WHITE = "\u001b[37m"
 
 # banner
 def printBanner():
@@ -40,14 +41,6 @@ def printA(*text):
 def printB(*text):
     print(CYAN + BOLD + "[$]", *text)
     print(RED + "<--------------->" + RED)
-
-def terminate():
-    print('Terminating, Bye'+LGREEN)
-    sys.exit(0)
-
-def error():
-    print(RED+"[~]"+" check your internet connection!"+CLEAR)
-    sys.exit(0)
 
 def flush():
     sys.stdout.flush()

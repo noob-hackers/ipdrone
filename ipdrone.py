@@ -9,6 +9,7 @@
 import argparse
 import requests, json
 from sys import argv
+import ipaddress
 
 from utils import *
 
@@ -21,6 +22,10 @@ ip = args.target
 
 # banner
 printBanner()
+
+if ipaddress.ip_address(ip).is_private:
+        print(RED + "[-] Private IP Address can not be tracked, provide the Public IP Address")
+        exit()
 
 try:
         data = requests.get(API+ip).json()
@@ -37,7 +42,10 @@ try:
         printA("[Zip code]:", data['zip'])
 
 except KeyboardInterrupt:
-        terminate()
+        print('Terminating, Bye' + LGREEN)
 
 except requests.exceptions.ConnectionError as e:
-        error()
+        print(RED + "[~] check your internet connection!" + CLEAR)
+
+print(WHITE)
+
