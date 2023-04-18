@@ -42,10 +42,13 @@ try:
         printA("[Zip code]:", data['zip'])
 
 except KeyboardInterrupt:
-        print('Terminating, Bye' + LGREEN)
+        print(LGREEN + 'Terminating, Bye')
 
 except requests.exceptions.ConnectionError as e:
         print(RED + "[~] check your internet connection!" + CLEAR)
+
+except ValueError:
+        print(RED + "[!] The Given IP Address does not seem to be valid")
 
 print(WHITE)
 
