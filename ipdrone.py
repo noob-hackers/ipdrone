@@ -1,74 +1,54 @@
-#coded by N17RO (noob hackers)
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-#modules required
+# NOTE: if you don't know your public ip use the publicIP.py script
+
+# coded by N17RO (noob hackers)
+
+# modules required
 import argparse
 import requests, json
-import sys
 from sys import argv
-import os
+import ipaddress
 
-#arguments and parser
+from utils import *
 
+# arguments and parser
 parser = argparse.ArgumentParser()
-
 parser.add_argument ("-v", help= "target/host IP address", type=str, dest='target', required=True )
-
 args = parser.parse_args()
-
-#colours used
-red = '\033[31m'
-yellow = '\033[93m'
-lgreen = '\033[92m'
-clear = '\033[0m'
-bold = '\033[01m'
-cyan = '\033[96m'
-
-#banner of script
-print (red+"""
-
-██╗██████╗ ██████╗ ██████╗  ██████╗ ███╗   ██╗███████╗
-██║██╔══██╗██╔══██╗██╔══██╗██╔═══██╗████╗  ██║██╔════╝
-██║██████╔╝██║  ██║██████╔╝██║   ██║██╔██╗ ██║█████╗  
-██║██╔═══╝ ██║  ██║██╔══██╗██║   ██║██║╚██╗██║██╔══╝  
-██║██║     ██████╔╝██║  ██║╚██████╔╝██║ ╚████║███████╗
-╚═╝╚═╝     ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
-                                                      v 1.0
-"""+red)
-print (lgreen+bold+"         <===[[ coded by N17RO ]]===> \n"+clear)
-print (yellow+bold+"   <---(( search on youtube Noob Hackers ))--> \n"+clear)
-
-
 ip = args.target
 
-api = "http://ip-api.com/json/"
+
+# banner
+printBanner()
+
+if ipaddress.ip_address(ip).is_private:
+        print(RED + "[-] Private IP Address can not be tracked, provide the Public IP Address")
+        exit()
 
 try:
-        data = requests.get(api+ip).json()
-        sys.stdout.flush()
-        a = lgreen+bold+"[$]"
-        b = cyan+bold+"[$]"
-        print (a, "[Victim]:", data['query'])
-        print(red+"<--------------->"+red)
-        print (b, "[ISP]:", data['isp'])
-        print(red+"<--------------->"+red)
-        print (a, "[Organisation]:", data['org'])
-        print(red+"<--------------->"+red)
-        print (b, "[City]:", data['city'])
-        print(red+"<--------------->"+red)
-        print (a, "[Region]:", data['region'])
-        print(red+"<--------------->"+red)
-        print (b, "[Longitude]:", data['lon'])
-        print(red+"<--------------->"+red)
-        print (a, "[Latitude]:", data['lat'])
-        print(red+"<--------------->"+red)
-        print (b, "[Time zone]:", data['timezone'])
-        print(red+"<--------------->"+red)
-        print (a, "[Zip code]:", data['zip'])
-        print (" "+yellow)
+        data = requests.get(API+ip).json()
+        flush()
+
+        printA("[Victim]:", data['query'])
+        printB("[ISP]:", data['isp'])
+        printA("[Organisation]:", data['org'])
+        printB("[City]:", data['city'])
+        printA("[Region]:", data['region'])
+        printB("[Longitude]:", data['lon'])
+        printA("[Latitude]:", data['lat'])
+        printB("[Time zone]:", data['timezone'])
+        printA("[Zip code]:", data['zip'])
 
 except KeyboardInterrupt:
-        print ('Terminating, Bye'+lgreen)
-        sys.exit(0)
+        print(LGREEN + 'Terminating, Bye')
+
 except requests.exceptions.ConnectionError as e:
-        print (red+"[~]"+" check your internet connection!"+clear)
-sys.exit(1)
+        print(RED + "[~] check your internet connection!" + CLEAR)
+
+except ValueError:
+        print(RED + "[!] The Given IP Address does not seem to be valid")
+
+print(WHITE)
+
